@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Nuestra Escuela</title>
+</head>
+<style>
+    * {
+        margin: 0%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: large;
+        font-style: italic;
+    }
+    body {
+        height: 100vh;
+    }
+    h1 {
+        margin-bottom: 15px;
+        font-size: 70px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    .menu {
+        padding-top: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        background-image: url(idiomas\ varios.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        height: 35%;
+        width: 100%;
+    }
+    .nav {
+        position: fixed;
+        width: 100%;
+        height: 10%;
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 2px dotted rgb(143, 142, 142);
+    }
+    .link {
+        display: flex;
+        flex: 1 1 auto;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .link:hover {
+        background-color: rgb(143, 142, 142);
+        transition: 1s;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+        font-size: x-large;
+    }
+    a:hover {
+        color: white;
+        transition: 1s;
+    }
+    .inscripcion {
+        display: flex;
+        justify-content: center;
+    }
+    .boton {
+        padding: 6px 6px 6px 6px;
+        transition: 0.4s;
+    }
+    .boton:hover {
+        transform: scale(1.2);
+        background-color: rgb(143, 142, 142);
+    }
+    .texto {
+        display: flex;
+        justify-content: center;
+        color: black;
+    }
+    .horarios {
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        width: 50%;
+        padding-left: 3%;
+    }
+    .titulacion-online {
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        width: 50%;
+        padding-left: 3%;
+    }
+    .icono {
+        margin-bottom: 20px;
+    }
+    .material-icons {
+        font-size: 50px;
+    }
+    b {
+        font-size: x-large;
+    }
+    .foto {
+        float: right;
+    }
+    .inscripcion {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    .boton {
+        padding: 6px 6px 6px 6px;
+        transition: 0.4s;
+        margin-bottom: 10%;
+    }
+    @media(max-width:1000px) {
+        a{
+            font-size:medium;
+        }
+        .texto {
+            flex-direction: column;
+            align-items: center;
+        }
+        .horarios {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            height: 50%;
+            width: 70%;
+            padding-left: 3%;
+        }
+        .titulacion-online {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            height: 50%;
+            width: 70%;
+            padding-left: 3%;
+        }
+        .link {
+            display: flex;
+            flex: 1 1 auto;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        h1{
+            font-size: 40px;
+        }
+    }
+</style>
+<body>
+    <div class="nav">
+        <div class="link">
+            <a href="Home.html">Home</a>
+        </div>
+        <div class="link">
+            <a href="Protocolo COVID-19.html">Protocolo COVID-19</a>
+        </div>
+        <div class="link">
+            <a href="Profesorado.html">Profesorado</a>
+        </div>
+        <div class="link">
+            <a href="Contacto.html">Contacto</a>
+        </div>
+    </div>
+    <div class="menu">
+        <h1>Nuestra Escuela</h1>
+    </div>
+
+    <div class="texto">
+        <div class="horarios">
+            <div class="icono">
+                <span class="material-icons">
+                    schedule
+                </span>
+            </div>
+            <h2>Horarios:</h2><br>
+            <p><b>Centro: </b>Lunes a jueves de 8:30 a 21:30 horas.<br>
+                Viernes de 8:30 a 14:30 horas.<br><br>
+                <b>Secretaria: </b>Lunes a viernes de 9:00 a 14:00 horas. <br><br>
+                <b>Reuniones informativas: </b>Salvo en casos excepcionales disponemos de reuniones los viernes de 15:00 a 17:30, en caso de no poder asistir contactad con secretaria para pedir una cita.<br>
+                Viernes de 8:30 a 14:30 horas.<br><br>
+            </p>
+        </div><br><br><br>
+        <div class="titulacion-online">
+            <div class="icono">
+                <span class="material-icons">
+                    language
+                </span>
+            </div>
+            <h2>Titulación online:</h2><br>
+            <p>Contamos con diferentes cursos presenciales y onlinme para facilitar la obtención del titulo que desees.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias odio ipsum asperiores explicabo quas tenetur rerum reprehenderit, voluptatibus architecto culpa quidem vitae repellendus ad illum.</p>
+        </div>
+    </div><br><br>
+    <div class="inscripcion">
+        <div class="boton">
+            <a href="Inscripción.html" id="inscripcion">Inscribete aquí.</a>
+        </div>
+    </div>
+</body>
+
+</html>

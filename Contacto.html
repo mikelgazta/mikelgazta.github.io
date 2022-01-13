@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Contacto</title>
+</head>
+<style>
+    * {
+        margin: 0%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: large;
+        font-style: italic;
+    }
+
+    body {
+        height: 100vh;
+    }
+
+    h1 {
+        margin-bottom: 15px;
+        font-size: 70px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .menu {
+        padding-top: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        background-image: url(idiomas\ varios.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        height: 35%;
+        width: 100%;
+    }
+
+    .nav {
+        position: fixed;
+        width: 100%;
+        height: 10%;
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 2px dotted rgb(143, 142, 142);
+    }
+
+    .link {
+        display: flex;
+        flex: 1 1 auto;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .link:hover {
+        background-color: rgb(143, 142, 142);
+        transition: 1s;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+        font-size: x-large;
+    }
+
+    a:hover {
+        color: white;
+        transition: 1s;
+    }
+
+    .inscripcion {
+        display: flex;
+        justify-content: center;
+    }
+
+    .boton {
+        padding: 6px 6px 6px 6px;
+        transition: 0.4s;
+    }
+
+    .boton:hover {
+        transform: scale(1.2);
+        background-color: rgb(143, 142, 142);
+    }
+
+    .texto {
+        display: flex;
+        justify-content: center;
+        color: black;
+    }
+
+    .horarios {
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        width: 50%;
+        padding-left: 3%;
+    }
+
+    .titulacion-online {
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        width: 50%;
+        padding-left: 3%;
+    }
+
+    .icono {
+        margin-bottom: 20px;
+    }
+
+    .material-icons {
+        font-size: 50px;
+    }
+
+    b {
+        font-size: x-large;
+    }
+
+    .foto {
+        float: right;
+    }
+
+    .inscripcion {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .boton {
+        padding: 6px 6px 6px 6px;
+        transition: 0.4s;
+        margin-bottom: 10%;
+    }
+
+    .mapa {
+        margin-left: 15%;
+    }
+    #pequeño{
+        display: none;
+    }
+    @media(max-width:1000px) {
+        a{
+            font-size:medium;
+        }
+        .mapa {
+            overflow: hidden;
+            width: 500px;
+            height: 350px;
+            margin-left: 0%;
+        }
+
+        #grande{
+            display: none;
+        }
+        
+        #pequeño{
+            display: block;
+        }
+        .texto {
+            flex-direction: column;
+            align-items: center;
+            padding-top: 1%;
+        }
+
+        .link {
+            display: flex;
+            flex: 1 1 auto;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .inscripcion {
+            margin-top: 3%;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+    }
+</style>
+
+<body>
+    <div class="nav">
+        <div class="link">
+            <a href="Home.html">Home</a>
+        </div>
+        <div class="link">
+            <a href="Nuestra Escuela.html">Nuestra Escuela</a>
+        </div>
+        <div class="link">
+            <a href="Protocolo COVID-19.html">Protocolo COVID-19</a>
+        </div>
+        <div class="link">
+            <a href="Profesorado.html">Profesorado</a>
+        </div>
+    </div>
+    <div class="menu">
+        <h1>Contacto</h1>
+    </div>
+    <div class="texto">
+        <div class="info">
+            <span class="material-icons" id="pregunta">
+                contact_support
+            </span><br><br>
+            <div class="pregunta">
+                <textarea cols="80" rows="8" name="descripcion" id="grande"
+                    placeholder="Escriba aqui sus preguntas o contactenos con los medios de abajo."></textarea>
+                <textarea id="pequeño" cols="45" rows="10" name="descripcion"
+                    placeholder="Escriba aqui sus preguntas o contactenos con los medios de abajo."></textarea><br><br>
+            </div>
+            <span class="material-icons">
+                call
+            </span> Telefono: (34) 999 999 999 <br><br>
+            <span class="material-icons">
+                email
+            </span> e-mail: escueladeidiomas@gmail.es
+        </div><br><br>
+        <div class="mapa">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46410.00651274527!2d-1.809362996154648!3d43.36394557406526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5109caec9bc761%3A0x1e3614410dc2b0a5!2sGetSmart%20180%C2%BA%20Escuela%20de%20idiomas!5e0!3m2!1ses!2ses!4v1640515712581!5m2!1ses!2ses"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+    </div>
+    <div class="inscripcion">
+        <div class="boton">
+            <a href="Inscripción.html" id="inscripcion">Inscribete aquí.</a>
+        </div>
+    </div>
+</body>
+
+</html>
