@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,132 +8,194 @@
     <title>Inscripcion</title>
 </head>
 <style>
- * {
-            margin: 0px;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: large;
-            font-style: italic;
-        }
-        body {
-            height: 100vh;
-            background-color: rgb(138, 136, 136);
-        }       
-        h1{
-            font-size: 50px;
-        }
-        h2{
-            font-size: 30px;
-        }
-        .menu{
-            display: flex;
-            justify-content: center;
-            background-image: url(idiomas\ varios.jpg);
-            background-repeat:no-repeat;
-            background-size: 100% 100%;
-            height: 35%;
-            width: 100%;
-        }
-        .nav{
-            width: 100%;
-            height: 5%;
-            background-color: white;
-            display: flex;
-            flex-direction: row; 
-            border-bottom: 3px solid black;
-        }
-        .link{
-            display: flex;
-            flex: 1 1 auto;
-            align-items: center;
-            justify-content: center;
-            margin-top: 6px;
-            margin-bottom: 6px;
-            margin-left: 5%;
-            margin-right: 5%;
-            background-color: grey;
-            overflow: hidden;
-        }
-        .link:hover{
-            background-color: black;
-            transition: 2s;
-        }
-        a{
-            text-decoration: none;
-            color: white;
-        }
-        .formulario{
-            padding-top: 30px;   
-            color: white;
-            padding-left: 5%;
-            display: flex;
-            flex-direction: row;
-        }
-        h2{
-            color: white;
-            padding-left: 5%;
-            padding-top: 30px;  
-        }
-        form{
-            width: 40%;
-            background:#e6e6e6;
-            border-radius:8px;
-            box-shadow:0 0 40px -10px #000;
-            margin: 0px 20px
+    * {
+        margin: 0px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: large;
+        font-style: italic;
+    }
 
-        }
-        .info{
-            display: flex;
-            flex-direction: column;
-        }
-        .boton{
-            align-self: center;
-            margin-top: 30px;
-            padding-right: 30px;
-        }
-        input{
-            width:100%;
-            padding-left:10px;
-            padding-top:5px ;
-            box-sizing:border-box;
-            background:none;
-            outline:none;
-            resize:none;
-            border:0;
-            font-family:'Montserrat',sans-serif;
-            transition:all .3s;
-            border-bottom:2px solid #bebed2
-        }
-        input:focus{
-            border-bottom:2px solid #78788c
-        }
-        select{
-            box-sizing:border-box;
-            background:none;
-            outline:none;
-            resize:none;
-            border:0;
-            font-family:'Montserrat',sans-serif;
-            transition:all .3s;
-            border-bottom:2px solid #bebed2
-        }
-        #fin{
-            background-color: rgb(240, 238, 238);
-            padding: 6px 6px 6px 6px;
-            border-bottom: none;
-        }
-        p{
-            color: black;
-        }
+    body {
+        height: 100vh;
+    }
+
+    h1 {
+        margin-bottom: 15px;
+        font-size: 50px;
+    }
+
+    .menu {
+        padding-top: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        background-image: url(idiomas\ varios.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        height: 35%;
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .nav {
+        position: fixed;
+        width: 100%;
+        height: 5%;
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 2px dotted rgb(143, 142, 142);
+    }
+
+    .link {
+        display: flex;
+        flex: 1 1 auto;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .link:hover {
+        background-color: rgb(143, 142, 142);
+        transition: 0.5s;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+        font-size: x-large;
+    }
+
+    a:hover {
+        color: white;
+        transition: 0.5s;
+    }
+
+    .formulario {
+        padding-top: 30px;
+        color: white;
+        padding-left: 5%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    form {
+        width: 35%;
+        background: #e6e6e6;
+        border-radius: 8px;
+        box-shadow: 0 0 40px -10px #000;
+        margin: 20px 20px 10%
+    }
+
+    .info {
+        width: 40%;
+        padding-left: 10%;
+        align-self: center;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .boton {
+        display: flex;
+        padding: 6px 6px 6px 6px;
+        align-items: center;
+        transition: 0.4s;
+        margin-bottom: 10%;
+        margin-top: 10%;
+        width: max-content;
+    }
+
+    .boton:hover {
+        transform: scale(1.2);
+        border-bottom:1px black solid;
+        border-color: green;
         
-        /*LINK-FORMULARIO :https://codepen.io/leenalavanya/pen/mPWdPZ*/
+    }
+
+    input {
+        width: 80%;
+        margin: 2% 0% 2% 5%;
+        padding-left: 10px;
+        padding-top: 5px;
+        box-sizing: border-box;
+        background: none;
+        outline: none;
+        resize: none;
+        border: 0;
+        font-family: 'Montserrat', sans-serif;
+        transition: all .3s;
+        border-bottom: 2px solid #bebed2
+    }
+
+    input:focus {
+        border-bottom: 2px solid #78788c
+    }
+
+    select {
+        box-sizing: border-box;
+        background: none;
+        outline: none;
+        resize: none;
+        border: 0;
+        font-family: 'Montserrat', sans-serif;
+        transition: all .3s;
+        border-bottom: 2px solid #bebed2
+    }
+
+    #fin {
+        width: 100%;
+        border-bottom: none;
+        margin-left: 0%;
+        padding-left: 0%;
+    }
+
+    p {
+        margin: 5%;
+        color: black;
+    }
+
+    @media(max-width:1000px) {
+        .formulario {
+            flex-direction: column;
+            align-items: center;
+            padding: 0%;
+        }
+
+        form {
+            width: 60%;
+        }
+
+        .info {
+            padding: 0%;
+            width: 60%;
+        }
+
+        a {
+            font-size: medium;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        h2 {
+            font-size: 25px;
+            padding-left: 5%;
+        }
+
+    }
 </style>
+
 <body>
-    <div class="menu">
-        <h1>Formulario de inscripción.</h1>
-    </div>
     <div class="nav">
         <div class="link">
-            <a href="Home.html">Home</a>
+            <a href="index.html">Home</a>
         </div>
         <div class="link">
             <a href="Nuestra Escuela.html">Nuestra Escuela</a>
@@ -147,17 +210,24 @@
             <a href="Contacto.html">Contacto</a>
         </div>
     </div><br>
-    <h2>Rellena tus datos para apuntarte a nuestros cursos.</h2><br>
+    <div class="menu">
+        <h1>Formulario de inscripción.</h1>
+        <h2>Rellena tus datos para apuntarte a nuestros cursos.</h2><br>
+
+    </div>
+
     <div class="formulario">
- 
+
         <form>
-            <label><p>Elige el idioma que deseas aprender.</p></label><br><br>
-                <select name="idioma">
-                    <option value="Español">Español</option>
-                    <option value="Euskera">Euskera</option>
-                    <option value="Ingles">Ingles</option>
-                    <option value="Frances">Frances</option>
-                </select>
+            <label>
+                <p>Elige el idioma que deseas aprender.</p>
+            </label><br><br>
+            <select name="idioma">
+                <option value="Español">Español</option>
+                <option value="Euskera">Euskera</option>
+                <option value="Ingles">Ingles</option>
+                <option value="Frances">Frances</option>
+            </select>
             <br><br>
             <input type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre"><br><br>
             <input type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido"><br><br>
@@ -167,13 +237,16 @@
             <input type="text" name="Direccion" id="Direccion" placeholder="Ingrese su Direccion"><br><br>
         </form>
         <div class="info">
-            Se realizaran reuniones informativas para los interesados el Jueves 23 con la intencion de solverntar todas las dudas posibles antes de empezar los cursos.
+            Se realizaran reuniones informativas para los interesados el Jueves 23 con la intencion de solverntar todas
+            las dudas posibles antes de empezar los cursos.<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas explicabo tenetur reiciendis recusandae, placeat possimus debitis unde aliquid eligendi tempora earum, praesentium suscipit, dolor fugit.
             <div class="boton">
-                <input type="button" onclick="alert('Se ha confirmado tu solicitud')" value="Finalizar inscripción" id="fin">
+                <input type="button" onclick="alert('Se ha confirmado tu solicitud')" value="Finalizar inscripción"
+                    id="fin">
             </div>
         </div>
-        
+
     </div>
 
 </body>
+
 </html>
