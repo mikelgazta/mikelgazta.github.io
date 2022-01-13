@@ -68,16 +68,19 @@
     a:hover {
         color: white;
         transition: 0.5s;
+     
     }
 
     .inscripcion {
         display: flex;
         justify-content: center;
     }
-    img{
+    #foto{
         display: flex;
         align-self: center;
         width: 80%;
+        border-radius: 3%;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     }
     .boton {
         display: flex ;
@@ -137,6 +140,7 @@
 </style>
 
 <body>
+    <main id="profesorado">
     <div class="nav">
         <div class="link">
             <a href="index.html">Home</a>
@@ -160,7 +164,7 @@
             <P><b>Pilar Gracía</b><br>
                 Horario de atención al público: Jueves de 12:00 a 13:00 horas.<br>
                 Correo electrónico: direccion@escuelaidiomas.es</P><br>
-            <img src="direccion.jpg" alt="">
+            <img id="foto" src="direccion.jpg" alt="">
         </div><br><br>
         <div class="jefe-de-estudio">
             <h2>Jefes de Estudio:</h2><br>
@@ -177,6 +181,7 @@
             <a href="Inscripción.html" id="inscripcion">Inscribete aquí.</a>
         </div>
     </div>
+    </main>
 </body>
 
 </html>
