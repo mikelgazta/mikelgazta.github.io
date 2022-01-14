@@ -6,519 +6,194 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="index.css">
     <title>Home</title>
-    <style>
-        * {
-            margin: 0%;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: large;
-            font-style: italic;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            background-color: rgb(230, 224, 177);
-        }
-
-        main {
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        h1 {
-            margin-bottom: 15px;
-            font-size: 70px;
-        }
-
-        h2 {
-            font-size: 30px;
-        }
-
-        .menu {
-            margin-top: 5%;
-            padding-top: 150px;
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            background-image: url(idiomas\ varios.jpg);
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            height: 35%;
-            width: 100%;
-        }
-
-        .nav {
-            width: 100%;
-            height: 5%;
-            position: fixed;
-            background-color: white;
-            display: flex;
-            flex-direction: row;
-            border-bottom: 2px dotted rgb(143, 142, 142);
-        }
-
-        .link {
-            display: flex;
-            flex: 1 1 auto;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .link:hover {
-            background-color: rgb(143, 142, 142);
-            transition: 0.5s;
-        }
-
-        a {
-            text-decoration: none;
-            color: black;
-            font-size: x-large;
-        }
-
-        a:hover {
-            color: white;
-            transition: 0.5s;
-        }
-
-        .banderas {
-            display: flex;
-            flex-direction: row;
-            padding-bottom: 50px;
-
-        }
-
-        .imagen {
-            display: flex;
-            margin-left: 5%;
-            margin-right: 4%;
-            height: 200px;
-            width: 300px;
-            border-radius: 50%;
-        }
-
-        .imagen img {
-            height: 100%;
-            width: 100%;
-            transition: 0.6s;
-            border-radius: 50%;
-            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-        }
-
-        img:hover {
-            transform: scale(1.20);
-        }
-
-        #direccion {
-            display: flex;
-            align-self: center;
-            width: 80%;
-            border-radius: 4%;
-            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-
-        }
-
-        #direccion:hover {
-            transform: none;
-        }
-
-        hr {
-            margin-top: 50px;
-            height: 100px;
-        }
-
-        .inscripcion {
-            display: flex;
-            justify-content: center;
-        }
-
-        .boton {
-            padding: 6px 6px 6px 6px;
-            transition: 0.4s;
-            margin-bottom: 10%;
-        }
-
-        .boton:hover {
-            transform: scale(1.2);
-            background-color: rgb(143, 142, 142);
-        }
-
-        .texto {
-            display: flex;
-            justify-content: center;
-            color: black;
-            padding: 10%;
-        }
-
-        .protocolo {
-            display: flex;
-            flex-direction: column;
-            padding: 10%;
-        }
-
-        .horarios {
-            display: flex;
-            flex-direction: column;
-            height: 50%;
-            width: 50%;
-            padding-left: 3%;
-        }
-
-        .titulacion-online {
-            display: flex;
-            flex-direction: column;
-            height: 50%;
-            width: 50%;
-            padding-left: 3%;
-        }
-
-        .icono {
-            margin-bottom: 20px;
-        }
-
-        .material-icons {
-            font-size: 50px;
-        }
-
-        b {
-            font-size: x-large;
-        }
-
-        .foto {
-            float: right;
-        }
-
-        .profesorado {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .mapa {
-            margin-left: 15%;
-        }
-
-        #pequeño {
-            display: none;
-        }
-
-        @media(max-width:1000px) {
-            a {
-                font-size: medium;
-            }
-
-            .link {
-                display: flex;
-                flex: 1 1 auto;
-                align-items: center;
-                justify-content: center;
-                overflow: hidden;
-            }
-
-            .banderas {
-                display: flex;
-            }
-
-            img {
-                height: 100%;
-                width: 100%;
-            }
-
-            .imagen {
-                height: 100px;
-                width: 150px;
-                padding-left: 5%;
-            }
-
-            #direccion {
-                height: 60%;
-                width: 100%;
-                align-self: flex-end;
-            }
-
-            .directora {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                overflow: hidden;
-            }
-
-            .titulo {
-                align-self: center;
-            }
-
-            hr {
-                display: none;
-            }
-
-            h1 {
-                font-size: 40px;
-            }
-
-            .jefe-de-estudio {
-                display: flex;
-                flex-direction: column;
-            }
-
-            .horarios {
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                height: 50%;
-                width: 70%;
-                padding-left: 3%;
-            }
-
-            .titulacion-online {
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                height: 50%;
-                width: 70%;
-                padding-left: 3%;
-            }
-
-            .texto {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .profesorado {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 100%;
-            }
-
-            .mapa {
-                overflow: hidden;
-                width: 500px;
-                height: 350px;
-                margin-left: 0%;
-            }
-
-            #grande {
-                display: none;
-            }
-
-            #pequeño {
-                display: block;
-            }
-
-            @media(max-width: 650px) {
-                .banderas {
-                    width: 100%;
-                    flex-wrap: wrap;
-                }
-
-                .imagen {
-                    margin-top: 3%;
-                    margin-left: 9%;
-                    margin-right: 1%;
-
-                }
-            }
-        }
-    </style>
 </head>
 
 <body>
-    <main id="index">
-        <div class="nav">
-            <div class="link">
-                <a href="#index">Home</a>
-            </div>
-            <div class="link">
-                <a href="#nuestra_escuela">Nuestra Escuela</a>
-            </div>
-            <div class="link">
-                <a href="#protocolo_covid">Protocolo COVID-19</a>
-            </div>
-            <div class="link">
-                <a href="#profesorado">Profesorado</a>
-            </div>
-            <div class="link">
-                <a href="#contacto">Contacto</a>
-            </div>
+    <div class="nav">
+        <div class="link">
+            <a href="#index">Home</a>
         </div>
-        <div class="menu">
-            <h1>Escuela de idiomas</h1>
+        <div class="link">
+            <a href="#nuestra_escuela">Nuestra Escuela</a>
         </div>
+        <div class="link">
+            <a href="#protocolo_covid">Protocolo COVID-19</a>
+        </div>
+        <div class="link">
+            <a href="#profesorado">Profesorado</a>
+        </div>
+        <div class="link">
+            <a href="#contacto">Contacto</a>
+        </div>
+    </div>
+    <main>
+        <section id="index">
+            <div class="menu idiomas">
+                <h1>Escuela de idiomas</h1>
+            </div>
 
-        <div class="banderas">
-            <div class="imagen">
-                <img src="bandera españa.png" onclick="window.localStorage.setItem('idioma', 'español')">
-            </div>
-            <hr>
-            <div class="imagen">
-                <img src="bandera inglesa.png" onclick="window.localStorage.setItem('idioma', 'español')">
-            </div>
-            <hr>
-            <div class="imagen">
-                <img src="bandera francesa.png" onclick="window.localStorage.setItem('idioma', 'español')">
-            </div>
-            <hr>
-            <div class="imagen">
-                <img src="ikurrina.png" onclick="window.localStorage.setItem('idioma', 'español')">
-            </div>
-        </div><br><br>
-        <div class="texto">
-            <p>Aprende con nosotros idiomas de todo el mundo. En nuestra sección encontraras cursos de ELE (enseñanza de
-                español como lengua extranjera), así como lenguas regionales como el Euskera o extranjeras como el
-                Ingles o
-                el Frances. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure rem nihil nesciunt ex odit
-                temporibus quos. Modi ducimus placeat nobis sint, labore aperiam quasi ad?</p>
-        </div><br><br>
-        <div class="inscripcion">
-            <div class="boton">
-                <a href="Inscripción.html" id="inscripcion">Inscribete aquí.</a>
-            </div>
-        </div>
-    </main>
-    <main id="nuestra_escuela">
-        <div class="menu">
-            <h1>Nuestra Escuela</h1>
-        </div>
-
-        <div class="texto">
-            <div class="horarios">
-                <div class="icono">
-                    <span class="material-icons">
-                        schedule
-                    </span>
+            <div class="banderas">
+                <div class="imagen">
+                    <img src="bandera españa.png">
                 </div>
-                <h2>Horarios:</h2><br>
-                <p><b>Centro: </b>Lunes a jueves de 8:30 a 21:30 horas.<br>
-                    Viernes de 8:30 a 14:30 horas.<br><br>
-                    <b>Secretaria: </b>Lunes a viernes de 9:00 a 14:00 horas. <br><br>
-                    <b>Reuniones informativas: </b>Salvo en casos excepcionales disponemos de reuniones los viernes de
-                    15:00 a 17:30, en caso de no poder asistir contactad con secretaria para pedir una cita.<br>
-                    Viernes de 8:30 a 14:30 horas.<br><br>
-                </p>
-            </div><br><br><br>
-            <div class="titulacion-online">
-                <div class="icono">
-                    <span class="material-icons">
-                        language
-                    </span>
+                <hr>
+                <div class="imagen">
+                    <img src="bandera inglesa.png">
                 </div>
-                <h2>Titulación online:</h2><br>
-                <p>Contamos con diferentes cursos presenciales y onlinme para facilitar la obtención del titulo que
-                    desees.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias odio ipsum asperiores
-                    explicabo quas tenetur rerum reprehenderit, voluptatibus architecto culpa quidem vitae repellendus
-                    ad illum.</p>
-            </div>
-        </div><br><br>
-        <div class="inscripcion">
-            <div class="boton">
-                <a href="Inscripción.html" id="inscripcion">Inscribete aquí.</a>
-            </div>
-        </div>
-    </main>
-    <main id="protocolo_covid">
-        <div class="menu">
-            <h1>Protocolo COVID-19</h1>
-        </div>
-        <div class="protocolo">
-            <h2 id="protocolo">COVID-19: PROTOCOLO PARA EL ALUMNADO OFICIAL DEL CURSO 2021-22.</h2><br>
-            <p>1. Antes de acudir al Centro, cada alumn@ deberá tomarse la temperatura. En caso de tener fiebre (más de
-                37ºC) o síntomas compatibles con la COVID (tos, dificultad para respirar, dolor de garganta, pérdida de
-                olfato…) no podrá acudir a la Escuela.<br><br>
-                2. El uso de la mascarilla es obligatorio en todo momento y en todos los espacios. La mascarilla será
-                del tipo higiénico como mínimo, y deberá contar con la correspondiente certificación y homologación. No
-                se admitirán mascarillas de tela o de rejilla.<br><br>
-                3. Acceso a la Escuela:
-                L@s alumn@s no accederán al Centro hasta 5 minutos antes del comienzo de las clases.
-                Horas de inicio de las clases: 09:00 / 11:15 / 13:30 / 15:45 / 18:00.<br><br>
-                4. Al acceder al Centro, deben lavarse las manos con gel hidroalcohólico.<br><br>
-                5. Sólo se podrá utilizar el ascensor de forma individual.<br><br>
-                6. Al finalizar la clase, cada alumn@ desinfectará su mesa con el producto que estará disponible en cada
-                aula.<br><br>
-                7. Todas las aulas se ventilarán durante 15 minutos entre clase y clase.<br><br>
-                8. Tanto la biblioteca como el espacio social permanecerán cerrados durante todo el curso.<br><br>
-                9. No se podrá permanecer en la Escuela, excepto durante el tiempo de clase.<br><br>
-                10. Cada alumn@ vendrá provisto de todo el material que necesite y evitará compartirlo con otr@s
-                compañer@s.<br><br>
-                11. Trabajo a turnos: para intentar que los grupos sean estables, cada alumn@ sólo podrá asistir a las
-                clases del grupo en que se haya matriculado.<br><br>
-                12. La Escuela cuenta con un refuerzo del servicio de limpieza y desinfección de los espacios
-                comunes.<br><br>
-                Todas estas medidas estarán sujetas a la evolución de la situación sanitaria.</p>
-        </div>
-        <div class="inscripcion">
-            <div class="boton">
-                <a href="Inscripción.html" id="inscripcion">Inscribete aquí.</a>
-            </div>
-        </div>
-    </main>
-    <main id="profesorado">
-        <div class="menu">
-            <h1>Profesorado</h1>
-        </div>
-        <div class="profesorado">
-            <div class="directora">
-                <h2 class="titulo">Directora:</h2><br>
-                <P><b>Pilar Gracía</b><br>
-                    Horario de atención al público: Jueves de 12:00 a 13:00 horas.<br>
-                    Correo electrónico: direccion@escuelaidiomas.es</P><br>
-                <img id="direccion" src="direccion.jpg" alt="">
-            </div>
-            <div class="jefe-de-estudio">
-                <h2 class="titulo">Jefes de Estudio:</h2><br>
-                <P><b>Silvia Oslé</b><br>
-                    Horas de atención al público: Martes de 12:00 a 13:00 horas.<br>
-                    Correo electrónico: jefatura@escuelaidiomas.es</P><br><br>
-                <P><b>Silvia Oslé</b><br>
-                    Horas de atención al público: Miercoles de 12:00 a 13:00 horas.<br>
-                    Correo electrónico: jefatura@escuelaidiomas.es</P><br>
-            </div>
-        </div><br><br>
-        <div class="inscripcion">
-            <div class="boton">
-                <a href="Inscripción.html" id="inscripcion">Inscribete aquí.</a>
-            </div>
-        </div>
-        <main id="contacto">
-            <div class="menu">
-                <h1>Contacto</h1>
-            </div>
+                <hr>
+                <div class="imagen">
+                    <img src="bandera francesa.png">
+                </div>
+                <hr>
+                <div class="imagen">
+                    <img src="ikurrina.png">
+                </div>
+            </div><br><br>
             <div class="texto">
-                <div class="info">
-                    <span class="material-icons" id="pregunta">
-                        contact_support
-                    </span><br><br>
-                    <div class="pregunta">
-                        <textarea cols="80" rows="8" name="descripcion" id="grande"
-                            placeholder="Escriba aqui sus preguntas o contactenos con los medios de abajo."></textarea>
-                        <textarea id="pequeño" cols="45" rows="10" name="descripcion"
-                            placeholder="Escriba aqui sus preguntas o contactenos con los medios de abajo."></textarea><br><br>
-                    </div>
-                    <span class="material-icons">
-                        call
-                    </span> Telefono: (34) 999 999 999 <br><br>
-                    <span class="material-icons">
-                        email
-                    </span> e-mail: escueladeidiomas@gmail.es
-                </div><br><br>
-                <div class="mapa">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46410.00651274527!2d-1.809362996154648!3d43.36394557406526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5109caec9bc761%3A0x1e3614410dc2b0a5!2sGetSmart%20180%C2%BA%20Escuela%20de%20idiomas!5e0!3m2!1ses!2ses!4v1640515712581!5m2!1ses!2ses"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-
+                <p>Aprende con nosotros idiomas de todo el mundo. En nuestra sección encontraras cursos de ELE
+                    (enseñanza de
+                    español como lengua extranjera), así como lenguas regionales como el Euskera o extranjeras como el
+                    Ingles o
+                    el Frances. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure rem nihil nesciunt ex
+                    odit
+                    temporibus quos. Modi ducimus placeat nobis sint, labore aperiam quasi ad?</p>
+            </div><br><br>
+        </section>
+        <section id="nuestra_escuela">
+            <div class="menu">
+                <h1>Nuestra Escuela</h1>
             </div>
+
+            <div class="texto">
+                <div class="horarios">
+                    <div class="icono">
+                        <span class="material-icons">
+                            schedule
+                        </span>
+                    </div>
+                    <h2>Horarios:</h2><br>
+                    <p><b>Centro: </b>Lunes a jueves de 8:30 a 21:30 horas.<br>
+                        Viernes de 8:30 a 14:30 horas.<br><br>
+                        <b>Secretaria: </b>Lunes a viernes de 9:00 a 14:00 horas. <br><br>
+                        <b>Reuniones informativas: </b>Salvo en casos excepcionales disponemos de reuniones los viernes
+                        de
+                        15:00 a 17:30, en caso de no poder asistir contactad con secretaria para pedir una cita.<br>
+                        Viernes de 8:30 a 14:30 horas.<br><br>
+                    </p>
+                </div><br><br><br>
+                <div class="titulacion-online">
+                    <div class="icono">
+                        <span class="material-icons">
+                            language
+                        </span>
+                    </div>
+                    <h2>Titulación online:</h2><br>
+                    <p>Contamos con diferentes cursos presenciales y onlinme para facilitar la obtención del titulo que
+                        desees.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias odio ipsum asperiores
+                        explicabo quas tenetur rerum reprehenderit, voluptatibus architecto culpa quidem vitae
+                        repellendus
+                        ad illum.</p>
+                </div>
+            </div><br><br>
+        </section>
+        <section id="protocolo_covid">
+            <div class="menu">
+                <h1>Protocolo COVID-19</h1>
+            </div>
+            <div class="protocolo">
+                <h2 id="protocolo">COVID-19: PROTOCOLO PARA EL ALUMNADO OFICIAL DEL CURSO 2021-22.</h2><br>
+                <p>1. Antes de acudir al Centro, cada alumn@ deberá tomarse la temperatura. En caso de tener fiebre (más
+                    de
+                    37ºC) o síntomas compatibles con la COVID (tos, dificultad para respirar, dolor de garganta, pérdida
+                    de
+                    olfato…) no podrá acudir a la Escuela.<br><br>
+                    2. El uso de la mascarilla es obligatorio en todo momento y en todos los espacios. La mascarilla
+                    será
+                    del tipo higiénico como mínimo, y deberá contar con la correspondiente certificación y homologación.
+                    No
+                    se admitirán mascarillas de tela o de rejilla.<br><br>
+                    3. Acceso a la Escuela:
+                    L@s alumn@s no accederán al Centro hasta 5 minutos antes del comienzo de las clases.
+                    Horas de inicio de las clases: 09:00 / 11:15 / 13:30 / 15:45 / 18:00.<br><br>
+                    4. Al acceder al Centro, deben lavarse las manos con gel hidroalcohólico.<br><br>
+                    5. Sólo se podrá utilizar el ascensor de forma individual.<br><br>
+                    6. Al finalizar la clase, cada alumn@ desinfectará su mesa con el producto que estará disponible en
+                    cada
+                    aula.<br><br>
+                    7. Todas las aulas se ventilarán durante 15 minutos entre clase y clase.<br><br>
+                    8. Tanto la biblioteca como el espacio social permanecerán cerrados durante todo el curso.<br><br>
+                    9. No se podrá permanecer en la Escuela, excepto durante el tiempo de clase.<br><br>
+                    10. Cada alumn@ vendrá provisto de todo el material que necesite y evitará compartirlo con otr@s
+                    compañer@s.<br><br>
+                    11. Trabajo a turnos: para intentar que los grupos sean estables, cada alumn@ sólo podrá asistir a
+                    las
+                    clases del grupo en que se haya matriculado.<br><br>
+                    12. La Escuela cuenta con un refuerzo del servicio de limpieza y desinfección de los espacios
+                    comunes.<br><br>
+                    Todas estas medidas estarán sujetas a la evolución de la situación sanitaria.</p>
+            </div>
+        </section>
+        <section id="profesorado">
+            <div class="menu">
+                <h1>Profesorado</h1>
+            </div>
+            <div class="profesorado">
+                <div class="directora">
+                    <h2 class="titulo">Directora:</h2><br>
+                    <P><b>Pilar Gracía</b><br>
+                        Horario de atención al público: Jueves de 12:00 a 13:00 horas.<br>
+                        Correo electrónico: direccion@escuelaidiomas.es</P><br>
+                    <img id="direccion" src="direccion.jpg" alt="">
+                </div>
+                <div class="jefe-de-estudio">
+                    <h2 class="titulo">Jefes de Estudio:</h2><br>
+                    <P><b>Silvia Oslé</b><br>
+                        Horas de atención al público: Martes de 12:00 a 13:00 horas.<br>
+                        Correo electrónico: jefatura@escuelaidiomas.es</P><br><br>
+                    <P><b>Silvia Oslé</b><br>
+                        Horas de atención al público: Miercoles de 12:00 a 13:00 horas.<br>
+                        Correo electrónico: jefatura@escuelaidiomas.es</P><br>
+                </div>
+            </div><br><br>
+            <section id="contacto">
+                <div class="menu">
+                    <h1>Contacto</h1>
+                </div>
+                <div class="texto">
+                    <div class="info">
+                        <span class="material-icons" id="pregunta">
+                            contact_support
+                        </span><br><br>
+                        <div class="pregunta">
+                            <textarea cols="80" rows="8" name="descripcion" id="grande"
+                                placeholder="Escriba aqui sus preguntas o contactenos con los medios de abajo."></textarea>
+                            <textarea id="pequeño" cols="45" rows="10" name="descripcion"
+                                placeholder="Escriba aqui sus preguntas o contactenos con los medios de abajo."></textarea><br><br>
+                        </div>
+                        <span class="material-icons">
+                            call
+                        </span> Telefono: (34) 999 999 999 <br><br>
+                        <span class="material-icons">
+                            email
+                        </span> e-mail: escueladeidiomas@gmail.es
+                    </div><br><br>
+                    <div class="mapa">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46410.00651274527!2d-1.809362996154648!3d43.36394557406526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5109caec9bc761%3A0x1e3614410dc2b0a5!2sGetSmart%20180%C2%BA%20Escuela%20de%20idiomas!5e0!3m2!1ses!2ses!4v1640515712581!5m2!1ses!2ses"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+
+                </div>
+           
+            </section>
             <div class="inscripcion">
                 <div class="boton">
                     <a href="Inscripción.html" id="inscripcion">Inscribete aquí.</a>
                 </div>
             </div>
-        </main>
-
+    </main>
 
 </body>
 
